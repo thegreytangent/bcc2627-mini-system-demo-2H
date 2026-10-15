@@ -1,6 +1,12 @@
+<?php  
+$student = new Student("12-11111","John", "cruz", "March 12, 2201");
+ ?>
 <main class="content">
             <h2>Student Information</h2>
-            <p>The warm-up is over. Let the real games begin.</p>
-            
+
+            Student Number:  <?php echo $student->id_number; ?></br/>
+            Complete Name:  <?php echo $student->completeName(); ?>
+          
+
         
         </main>
