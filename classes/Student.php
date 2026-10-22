@@ -1,5 +1,4 @@
 <?php
-
 class Student extends Person
 {
     public string $id_number;
@@ -10,7 +9,6 @@ class Student extends Person
         $this->id_number = $id_number;
         $this->dob = $dob;
         parent::__construct($firstname, $lastname);
-        
     }
 
    
