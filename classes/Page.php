@@ -7,10 +7,13 @@ class Page
             case 'dashboard':
                 include 'modules/dasboard_display.php';
                 break;
-            case 'students':
+                case 'students':
                 include 'modules/student_display.php';
                 break;
-                 case 'grades':
+                case 'student-add':
+                include 'modules/student_add.php';
+                break;
+                case 'grades':
                 include 'modules/grades_display.php';
                 break;
             default:

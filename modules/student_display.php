@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <h2>Student Information</h2>
 
-        <button class="btn btn-success mb-4">Add Student</button>
+        <a href="?page=student-add" class="btn btn-success mb-4">Add Student</a>
 
         <table class="table">
             <thead class="table-dark">
