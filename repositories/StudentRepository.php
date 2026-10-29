@@ -3,23 +3,18 @@ class StudentRepository extends DBRepository implements IStudentRepository
 {
     public static function all(): array
     {
-        $students =  [
-            [
-                'student_number' => '2023-0001',
-                'firstname' => 'John',
-                'lastname' => 'Doe',
-                'dob' => '2000-01-01'
-            ],
-            [
-                'student_number' => '2023-xxxx',
-                'firstname' => 'John',
-                'lastname' => 'Doe',
-                'dob' => '2000-01-01'
-            ]
-
-        ];
-
-        return $students;
+        $students = self::query("SELECT * FROM student");
+      
+        $result = [];
+        foreach ($students as $s) {
+            $result[] = new Student(
+                $s['student_number'],
+                $s['firstname'],
+                $s['lastname'],
+                $s['dob']
+            );
+        }
+        return $result;
     }
 
     public static function find(string $id): array
