@@ -4,6 +4,8 @@
 
         <a href="?page=student-add" class="btn btn-success mb-4">Add Student</a>
 
+      
+
         <table class="table">
             <thead class="table-dark">
                 <tr>
@@ -22,7 +24,7 @@
                         <td><?php echo $student->getDOB(); ?></td>
                         <td>
                             <button class="btn btn-info">Edit</button>
-                            <button class="btn btn-danger">Delete</button>
+                            <button onclick="delete_data('<?php echo $student->getId(); ?>')" class="btn btn-danger">Delete</button>
                         </td>
                     </tr>
                 <?php endforeach ?>
@@ -31,3 +33,11 @@
 
     </div>
 </main>
+
+<script>
+    function delete_data(id) {
+        if (confirm("Are you sure you want to delete this record?")) {
+            window.location = "modules/student_delete.php?id=" + id;
+        }
+    }           
+</script>

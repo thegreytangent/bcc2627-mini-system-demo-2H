@@ -6,7 +6,7 @@ class DBRepository
 
     public static function connection()
     {
-       self::$connection =  new mysqli( 'localhost', 'dev', 'devs', 'enrollment' );
+       self::$connection =  new mysqli('localhost', 'dev', 'devs', 'enrollment' );
         if (self::$connection->errno) {
             die("Database error");
         }

@@ -8,7 +8,7 @@ interface IStudentRepository
 
     public static function update(array $data, string $id): array;
 
-    public static function delete(string $id): void;
+    public static function delete(int $id): void;
 
     public static function create(array $data): array;
 }
